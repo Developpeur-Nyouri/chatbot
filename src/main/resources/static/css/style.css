@@ -1,0 +1,449 @@
+/* ========================================
+   CONFIGURATION GENERALE
+======================================== */
+
+:root {
+    --background: #0b1020;
+    --background-light: #111a30;
+    --card: #151e35;
+    --primary: #6965ff;
+    --secondary: #a16eff;
+    --text: #f5f7ff;
+    --text-muted: #9ba6c0;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.chatbot-navbar {
+    background: rgba(11, 16, 32, 0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.brand-icon {
+    color: var(--secondary);
+    font-size: 28px;
+}
+
+.navbar .nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: white;
+}
+
+/* ========================================
+   BOUTONS
+======================================== */
+
+.btn-chatbot {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-chatbot:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(105, 101, 255, 0.3);
+}
+
+.btn-outline-light {
+    border-radius: 10px;
+    padding: 12px 22px;
+}
+
+/* ========================================
+   ACCUEIL
+======================================== */
+
+.home-section {
+    position: relative;
+    padding: 70px 0;
+    background:
+            radial-gradient(circle at 80% 30%, rgba(105, 101, 255, 0.13), transparent 35%),
+            radial-gradient(circle at 10% 80%, rgba(161, 110, 255, 0.08), transparent 30%);
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.badge-chatbot {
+    display: inline-block;
+    background: rgba(105, 101, 255, 0.12);
+    border: 1px solid rgba(105, 101, 255, 0.3);
+    color: #b9b6ff;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.home-title {
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.home-title span {
+    display: block;
+    background: linear-gradient(90deg, #7773ff, #c18aff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.home-description {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 570px;
+    margin-top: 25px;
+}
+
+.home-information {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* ========================================
+   CARTE DE DEMONSTRATION IA
+======================================== */
+
+.ai-card {
+    background: rgba(21, 30, 53, 0.9);
+    border: 1px solid rgba(145, 135, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ai-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+}
+
+.ai-status {
+    width: 9px;
+    height: 9px;
+    background: #38d996;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #38d996;
+}
+
+.ai-card-body {
+    padding-top: 25px;
+}
+
+.message-ai,
+.message-user {
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.message-ai {
+    background: #202b46;
+    color: #dce3f7;
+    border-bottom-left-radius: 3px;
+    max-width: 90%;
+}
+
+.message-user {
+    background: linear-gradient(135deg, #6965ff, #936bff);
+    color: white;
+    margin-left: auto;
+    max-width: 85%;
+    border-bottom-right-radius: 3px;
+}
+
+.ai-input {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+}
+
+.send-icon {
+    color: #a18aff;
+    font-size: 20px;
+}
+
+/* ========================================
+   FONCTIONNALITES
+======================================== */
+
+.features-section {
+    padding: 100px 0;
+    background: var(--background-light);
+}
+
+.section-label {
+    color: #a18aff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-title {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.section-description {
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.feature-card {
+    height: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(145, 135, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(105, 101, 255, 0.15);
+    color: #aaa5ff;
+    font-size: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+.feature-card h4,
+.feature-card h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ========================================
+   CONNEXION
+======================================== */
+
+.login-section {
+    padding: 50px 0;
+    background:
+            radial-gradient(circle at 50% 40%, rgba(105, 101, 255, 0.13), transparent 45%);
+}
+
+.login-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.login-logo {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 18px;
+    font-size: 35px;
+    color: white;
+}
+
+.login-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.login-description {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.login-card .form-label {
+    color: #e5e9f5;
+    font-weight: 500;
+}
+
+.chatbot-input {
+    background: #0f172a;
+    border: 1px solid var(--border);
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.chatbot-input::placeholder {
+    color: #75819c;
+}
+
+.chatbot-input:focus {
+    background: #0f172a;
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(105, 101, 255, 0.15);
+}
+
+.login-separator {
+    text-align: center;
+    margin: 30px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 0;
+}
+
+.login-separator span {
+    background: var(--card);
+    color: var(--text-muted);
+    padding: 0 15px;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.back-home {
+    color: #aaa5ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: white;
+}
+
+.login-footer-text {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.chatbot-footer {
+    background: #080d19;
+    border-top: 1px solid var(--border);
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.chatbot-footer p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .home-section {
+        padding: 50px 0;
+    }
+
+    .home-title {
+        font-size: 38px;
+    }
+
+    .home-information {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .features-section {
+        padding: 60px 0;
+    }
+
+    .login-card {
+        padding: 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        text-align: left;
+    }
+
+}

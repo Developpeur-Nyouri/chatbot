@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: layout(~{::title}, ~{::section})}">
+
+<head>
+    <title>Accueil | ChatBot</title>
+</head>
+
+<body>
+
+<section class="home-section">
+
+    <div class="container">
+
+        <div class="row align-items-center min-vh-75">
+
+            <!-- Présentation -->
+            <div class="col-lg-7">
+
+                <div class="badge-chatbot mb-4">
+                    ✦ Votre assistant intelligent
+                </div>
+
+                <h1 class="home-title">
+                    Découvrez une nouvelle façon
+                    <span>de communiquer avec l'IA.</span>
+                </h1>
+
+                <p class="home-description">
+                    Posez vos questions, explorez vos idées et obtenez
+                    des réponses grâce à votre assistant intelligent.
+                    Une expérience simple, rapide et intuitive.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+
+                    <a th:href="@{/connexion}" class="btn btn-chatbot btn-lg">
+                        Commencer maintenant →
+                    </a>
+
+                    <a href="#fonctionnalites" class="btn btn-outline-light btn-lg">
+                        En savoir plus
+                    </a>
+
+                </div>
+
+                <div class="home-information mt-5">
+                    <span>✦ Simple d'utilisation</span>
+                    <span>✦ Assistant intelligent</span>
+                    <span>✦ Interface moderne</span>
+                </div>
+
+            </div>
+
+            <!-- Illustration -->
+            <div class="col-lg-5 mt-5 mt-lg-0">
+
+                <div class="ai-card">
+
+                    <div class="ai-card-header">
+                        <div class="ai-status"></div>
+                        <span>Assistant ChatBot</span>
+                        <span class="ms-auto">✦</span>
+                    </div>
+
+                    <div class="ai-card-body">
+
+                        <div class="message-ai">
+                            Bonjour ! Comment puis-je vous aider aujourd'hui ?
+                        </div>
+
+                        <div class="message-user">
+                            Peux-tu m'aider à trouver une idée ?
+                        </div>
+
+                        <div class="message-ai">
+                            Bien sûr ! Je suis là pour répondre à tes questions
+                            et t'accompagner dans tes projets.
+                        </div>
+
+                        <div class="ai-input">
+                            <span>Écrivez votre message...</span>
+                            <span class="send-icon">➤</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Fonctionnalités -->
+<section id="fonctionnalites" class="features-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">NOS AVANTAGES</span>
+            <h2 class="section-title">Une expérience intelligente</h2>
+            <p class="section-description">
+                Tout ce dont vous avez besoin pour échanger avec l'intelligence artificielle.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">✦</div>
+                    <h4>Intelligence artificielle</h4>
+                    <p>
+                        Profitez d'un assistant capable de comprendre
+                        vos questions et de vous répondre.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Rapidité</h4>
+                    <p>
+                        Obtenez des réponses rapidement et
+                        facilitez vos recherches.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">◈</div>
+                    <h4>Simplicité</h4>
+                    <p>
+                        Une interface claire et agréable
+                        pour faciliter vos échanges.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

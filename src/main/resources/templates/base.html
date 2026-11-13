@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(titre, contenu)">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title th:replace="${titre}">ChatBot</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/vendor/css/bootstrap.min.css}">
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<!-- Navigation -->
+<header th:replace="~{fragments/header :: header}"></header>
+
+<!-- Contenu de la page -->
+<main class="flex-grow-1">
+    <div th:replace="${contenu}"></div>
+</main>
+
+<!-- Pied de page -->
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+
+<!-- Bootstrap JavaScript -->
+<script th:src="@{/vendor/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+</html>

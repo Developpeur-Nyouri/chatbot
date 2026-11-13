@@ -1,0 +1,35 @@
+<nav th:fragment="header" class="navbar navbar-expand-lg navbar-dark chatbot-navbar">
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center gap-2" th:href="@{/}">
+            <span class="brand-icon">✦</span>
+            <span>ChatBot</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+            <div class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                <a class="nav-link" th:href="@{/}">
+                    Accueil
+                </a>
+
+                <a class="nav-link" th:href="@{/connexion}">
+                    Connexion
+                </a>
+
+                <a class="btn btn-chatbot ms-lg-2" th:href="@{/connexion}">
+                    Commencer
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
